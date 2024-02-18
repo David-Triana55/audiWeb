@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audi</title>
+    <link rel="website icon" type="png" href="./assets/logo-audi-png_optimized-1024x1024.webp" >
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+        header{
+            width: 100%;
+            height: 45px;
+            background-color: #0d1117;
+            display: flex;
+            justify-content: space-between;
+        }
+        .container-left {
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+        }
+        .container-left ul {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items:center ;
+
+        }
+        li{
+            margin-right: 15px;
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            color: #e6edf3;
+            font-weight: 700;
+        }
+        #register {
+            margin-right: 15px;
+            color: #e6edf3;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .container-right {
+            display: flex;
+            align-items: center;
+        }
+        .container-right ul {
+            display: flex;
+            align-items: center;
+        }
+
+        .container-register{
+            position: absolute;
+            left: 272px;
+            top: 44px;
+            background-color: #0d1117;
+            z-index: 2;
+            height: 70px;
+            border-radius: 0px 0px 8px 8px;
+        }
+        .inactive {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .container-register ul li {
+            margin-top: 4px;
+        }
+        .container-register ul li a {
+            color: #e6edf3;            
+        }
+
+        .title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            margin-top: 15px;
+        }
+        .logo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .logo svg{
+            height: 80px;
+            margin-top: 30px;
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            height: auto;
+            align-items: center;
+        }
+        section h2 {
+            color: #7c6a0a;
+            font-size: 26px;
+            font-weight: 500;
+            margin-bottom: 20px;
+
+        }
+        section .main-section h2{
+            font-weight: 500;
+            font-size: 24px;
+        }
+        section .main-section .card-section {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            -moz-column-gap: 100px;
+            column-gap: 100px;
+            row-gap: 80px;
+        }
+        section .main-section .product-card {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 232px;
+            min-height: 222px;
+            border-radius: 8px;
+            background-color: #231b35;
+            color: #7c6a0a;
+        }
+        section .main-section .product-card svg{
+            position: absolute;
+            top: 2px;
+            left: 205px;
+        }
+        section .main-section .product-card .product-card--info {
+            width: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        section .main-section .product-card .product-card--info img {
+            width: 230px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: contain;
+        } 
+        #servicios {
+            margin-top: 70px;
+            margin-bottom: 70px;
+        }
+        #mantenimiento{
+            margin-bottom: 80px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-left">
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#mantenimiento">Mantenimiento</a></li>
+                <li><a href="./Registro.html">Nosotros</a></li>
+                <li id="register">Registro</li>
+            </ul>
+        </div>
+
+
+        <div class="container-right">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/audi/">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                        
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                        
+                        <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#ffffff"/> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#ffffff"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#ffffff"/> </g>
+                        
+                        </svg>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/audilatinoamerica/">
+
+                        <svg fill="#ffffff" width="26px" height="26px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="">
+                            
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <g id="SVGRepo_iconCarrier"> <path d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"/> </g>
+                        
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    
+    <div class="main">
+        <div class="title">
+            <section class="logo">    
+                <img src="./assets/logo-audi-png_optimized-1024x1024.webp" alt="">
+            </section>
+
+            <section class="product-section" id="productos">
+                <h2>Productos</h2>
+                <div class="main-section">
+                    <div class="card-section">
+                        <div class="product-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill= "red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#b1aeac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>  
+        
+                            <div class="product-card--info">
+                                <img src="./assets/OIP.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill= "red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#b1aeac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                            
+                            <div class="product-card--info">
+                                <img src="./assets/R.jpg" alt="">
+                            </div>
+                        
+                        </div>
+                        <div class="product-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill= "red" xmlns="">
+                            <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#b1aeac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                            
+                            <div class="product-card--info">
+                                <img src="./assets/R (1).jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="product-section" id="servicios">
+                <h2>Servicios</h2>
+                <div class="main-section">
+                    <div class="card-section">
+                        <div class="product-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill= "red" xmlns="">
+                            <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#b1aeac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>  
+        
+                            <div class="product-card--info">
+                                <img src="./assets/concesionario-audi-cordoba.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill= "red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#b1aeac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                            
+                            <div class="product-card--info">
+                                <img src="./assets/960x540_audi-1.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill= "red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#b1aeac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                            
+                            <div class="product-card--info">
+                                <img src="./assets/cdb8db53dfe8d433803ccf0956fb5342_XL.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="product-section" id="mantenimiento">
+                <h2>Mantenimiento</h2>
+                <div class="main-section">
+                    <div class="card-section">
+                        <div class="product-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill= "red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#b1aeac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>  
+        
+                            <div class="product-card--info">
+                                <img src="./assets/R (2).jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill= "red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#b1aeac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                            
+                            <div class="product-card--info">
+                                <img src="./assets/04_AudiService_MANTENIMIENTO_Miniatures_audi.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill= "red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#b1aeac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                            
+                            <div class="product-card--info">
+                                <img src="./assets/OIP (1).jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        
+       
+</body>
+</html>
