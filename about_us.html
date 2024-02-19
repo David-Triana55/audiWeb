@@ -114,7 +114,11 @@
         
         .container .content p{
             margin-bottom: 32px;
-            color: #ccc;
+            color: #a39696;
+            font-size: 15px;
+            line-height: 1.5;
+            text-align: center;
+            font-style: italic; /* Agrega estilo cursiva al texto */
         }
         
         .container .image{
@@ -129,7 +133,7 @@
             transform: translate(-50%, -50%);
             padding: 20px;
             background-color: #fdfdfd;
-            border: 1px solid #a09494;
+            border: 1px solid #907b7b;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             z-index: 9999;
         }
@@ -161,6 +165,7 @@
         button:hover {
             background-color: #2c044e;
         }
+
     </style>
 </head>
 
@@ -204,18 +209,25 @@
             <H1>Bienvenidos a audi, <span>inovación</span>, Rendimiento y Elegancia</H1>
                 <button onclick="mostrarVentana()">Mostrar Información</button>
 
-            <!-- Mini ventana y fondo oscuro -->
+          
             <div id="fondoOscuro"></div>
                 <div id="miVentana">
 
         <h2>Audi: Innovación, Rendimiento y Elegancia</h2>
         <p>
         <p>Bienvenidos a Audi, donde la innovación, el rendimiento excepcional y la elegancia atemporal convergen. Nuestra marca se define por la filosofía "Vorsprung durch Technik" (Avance mediante la tecnología), reflejada en cada vehículo que creamos. Descubre la emoción de conducir un Audi: diseño elegante, tecnología punta y un compromiso inquebrantable con la calidad. Experimenta el lujo en cada detalle y siente el rendimiento que solo Audi puede ofrecer. ¡Bienvenidos a la excelencia automotriz!</p>
+        <p>
+        <p>Explora la Experiencia Audi: Sostenibilidad y Vanguardia En Audi, no solo creamos automóviles, forjamos experiencias. Nos destacamos no solo por nuestro rendimiento excepcional y diseño elegante, sino también por nuestro compromiso con la sostenibilidad. Innovamos constantemente para reducir nuestra huella ambiental, impulsando un futuro más sostenible.</p>
+        <p>
+        <p>Cada modelo Audi es el resultado de la pasión por la ingeniería de vanguardia. Desde sistemas de propulsión eficientes hasta avanzadas tecnologías de asistencia al conductor, nuestros vehículos van más allá de las expectativas, ofreciendo una conducción que redefine los estándares.</p>
+        <p>
+        <P>En Audi, no simplemente conducimos, avanzamos. Te invitamos a sumergirte en la emoción de la conducción, donde cada trayecto es una fusión perfecta de rendimiento apasionante y diseño cautivador. Nuestra visión va más allá de las carreteras actuales; estamos creando el futuro de la movilidad.</P>
+
 
         <button onclick="cerrarVentana()">Cerrar</button>
          </div>
 
-    <!-- Script para mostrar y ocultar la mini ventana -->
+
     <script>
         function mostrarVentana() {
             document.getElementById('miVentana').style.display = 'block';
